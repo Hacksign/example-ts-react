@@ -9,7 +9,7 @@
             "request": "launch",
             "name": "Fg Debug",
             "url": "http://127.0.0.1:2000/",
-            "webRoot": "${workspaceFolder}"
+            "webRoot": "${workspaceFolder}",
         },
         {
             "name": "Bg Debug",
@@ -23,7 +23,9 @@
             "skipFiles": [
               "<node_internals>/**"
             ],
-            "type": "pwa-node"
+            "type": "pwa-node",
+            "sourceMaps": true,
+            "trace": true
         },      
     ]
 }

@@ -8,7 +8,11 @@ const clientWebpackConfig = require('../webpack.client');
 const compiler = webpack([clientWebpackConfig]);
 
 app.use(
-    webpackDevMiddle(compiler, { publicPath: clientWebpackConfig.output.publicPath })
+    webpackDevMiddle(compiler,
+        { 
+            publicPath: clientWebpackConfig.output.publicPath,
+        }
+    )
 );
 compiler.hooks.done.tap(
     'ExampleProject',

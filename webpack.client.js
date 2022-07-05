@@ -4,7 +4,7 @@ module.exports = {
     name: 'client webpack config',
     target: 'web',
     mode: 'development',
-    devtool: 'cheap-module-source-map',
+    devtool: 'source-map',
     resolve: {
         extensions: ['.ts', '.tsx']
     },
