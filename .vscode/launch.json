@@ -9,7 +9,6 @@
         "request": "launch",
         "type": "chrome",
         "url": "http://localhost:2000",
-        "webRoot": "${workspaceFolder}"
       },
       {
           "type": "firefox",
@@ -18,12 +17,12 @@
           "reAttach": true,
           "url": "http://127.0.0.1:2000",
           "webRoot": "${workspaceFolder}",
-          "log": {
-            "fileName": "${workspaceFolder}/log.txt",
-            "fileLevel": {
-              "default": "Debug",
+          "pathMappings": [
+            {
+              "url": "webpack://ts-debug/src",
+              "path": "${webRoot}/src"
             }
-          }
+          ],
       },
       {
           "name": "Bg Debug",
@@ -37,7 +36,7 @@
           "skipFiles": [
             "<node_internals>/**"
           ],
-          "type": "pwa-node",
+          "type": "node",
           "sourceMaps": true,
       },      
     ]
